@@ -37,6 +37,7 @@ function Shell() {
           {view === 'settings' && <Settings />}
           <footer className="mt-8 flex flex-wrap items-center justify-between gap-2 border-t border-line pt-4 pb-1 font-mono text-[10.5px] text-ink-300">
             <span>Meridian CRM · Client intelligence platform</span>
+            <span className="font-medium text-ink-500">Built by Abhishek</span>
             <span>Workspace synced locally · v2.4.1</span>
           </footer>
         </main>
