@@ -96,13 +96,13 @@ export function AreaChart({ values, labels, target, color = 'var(--acc)', h = 23
         {target !== undefined && (
           <g>
             <line x1={P} x2={W - P} y1={y(target)} y2={y(target)} stroke="#d99a2b" strokeWidth={1.5} strokeDasharray="6 5" />
-            <text x={W - P} y={y(target) - 6} textAnchor="end" fontSize={10} fontFamily="JetBrains Mono" fill="#b47f22">target {target}k</text>
+            <text x={W - P} y={y(target) - 6} textAnchor="end" fontSize={10} className="font-mono" style={{ fontFamily: 'var(--font-mono)' }} fill="#b47f22">target {target}k</text>
           </g>
         )}
         <path d={dArea} fill={color} opacity={0.1} className="fade-late" />
         <path d={dLine} fill="none" stroke={color} strokeWidth={2.4} strokeLinecap="round" pathLength={1} className="draw-path" />
         {values.map((v, i) => (
-          <text key={labels[i]} x={x(i)} y={H - 14} textAnchor="middle" fontSize={10} fontFamily="JetBrains Mono" fill={idx === i ? '#141b17' : '#9aa79e'} fontWeight={idx === i ? 700 : 400}>
+          <text key={labels[i]} x={x(i)} y={H - 14} textAnchor="middle" fontSize={10} className="font-mono" style={{ fontFamily: 'var(--font-mono)' }} fill={idx === i ? '#141b17' : '#9aa79e'} fontWeight={idx === i ? 700 : 400}>
             {labels[i]}
           </text>
         ))}
